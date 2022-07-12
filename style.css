@@ -3,8 +3,6 @@
     --primary-cyan: hsl(180, 62%, 55%);
     --primary-orange: hsl(34, 97%, 64%);
     --primary-blue: hsl(212, 86%, 64%);
-    --neutral-very-dark-blue: hsl(234, 12%, 34%);
-    --neutral-grayish-blue: hsl(229, 6%, 66%);
     --neutral-very-light-gray: hsl(0, 0%, 98%);
     --fs-color: hsl(234, 12%, 34%);
     --fs: 0.8125rem;
@@ -35,6 +33,7 @@ body {
     font-weight: 400;
     font-family: var(--ff-poppins);
     color: var(--fs-color);
+    background-color: var(--neutral-very-light-gray);
 }
 
 main,
@@ -49,6 +48,7 @@ header {
 
 header p:nth-of-type(1) {
     order: -1;                                    /* css Tricks: https://css-tricks.com/html-for-subheadings-and-headings/ */
+    margin-bottom: 1rem;
 }
 
 main {
@@ -133,6 +133,11 @@ h2 {
 }
 
 @media (min-width: 47.75em) {
+    
+    header p:nth-of-type(2) {
+        width: 70%;
+    }
+    
     section {
         width: auto;
         height: 15.625rem;
