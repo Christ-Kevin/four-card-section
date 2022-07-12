@@ -50,7 +50,6 @@ header {
 header p:nth-of-type(1) {
     order: -1;
     /* css Tricks: https://css-tricks.com/html-for-subheadings-and-headings/ */
-    margin-bottom: .5rem;
 }
 
 main {
