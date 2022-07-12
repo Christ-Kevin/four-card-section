@@ -4,6 +4,7 @@
     --primary-orange: hsl(34, 97%, 64%);
     --primary-blue: hsl(212, 86%, 64%);
     --neutral-very-light-gray: hsl(0, 0%, 98%);
+    --neutral-grayish-blue: hsl(229, 6%, 66%);
     --fs-color: hsl(234, 12%, 34%);
     --fs: 0.8125rem;
     --fs-h1: 1.5rem;
@@ -47,8 +48,9 @@ header {
 }
 
 header p:nth-of-type(1) {
-    order: -1;                                    /* css Tricks: https://css-tricks.com/html-for-subheadings-and-headings/ */
-    margin-bottom: 1rem;
+    order: -1;
+    /* css Tricks: https://css-tricks.com/html-for-subheadings-and-headings/ */
+    margin-bottom: .5rem;
 }
 
 main {
@@ -122,6 +124,10 @@ h2 {
     font-size: var(--fs-h2);
 }
 
+section p {
+    color: hsl(229, 6%, 66%);
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -129,15 +135,15 @@ h2 {
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--neutral-grayish-blue);
 }
 
 @media (min-width: 47.75em) {
-    
+
     header p:nth-of-type(2) {
         width: 70%;
     }
-    
+
     section {
         width: auto;
         height: 15.625rem;
