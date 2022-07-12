@@ -128,7 +128,7 @@ h2 {
     font-size: var(--fs-h2);
 }
 
-p {
+p:not(header p:nth-of-type(1)) {
     color: hsl(229, 6%, 66%);
 }
 
