@@ -12,8 +12,14 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-o8PCG3LAxubGfrWSPXF3Bj8txAgQIFJhbMCuWZ6ODH0=" crossorigin="" />
+
 
     <title>Kartografisches Minispiel | Wo ist Walter?</title>
+    <script src="script.js" defer></script>
+
+
 </head>
 
 <body>
@@ -21,32 +27,36 @@
     <main>
         <header>
 
-            <h1>Kartografische Minispiel</h1>
+            <h1>Kartografisches Minispiel</h1>
             <p>Wo ist Walter ?</p>
-            <p>Reise rund um die Welt und finde Walter! Löse geografische Rätsel, entdecke Städte und lerne mehr über die Welt – in
-            verschiedenen Spielmodi!</p>
+            <p>Reise rund um die Welt und finde Walter! Löse geografische Rätsel, entdecke Städte und lerne mehr über
+                die Welt – in
+                verschiedenen Spielmodi!</p>
         </header>
 
         <div>
-            <section>
-                <h2>Entdecker</h2>
-                <p>Finde Walter in einer zufälligen Stadt – dein geografisches Wissen ist gefragt!</p>
+            <section class="amerika">
+                <h2>Amerika</h2>
+                <p>Erkunde Nord- und Südamerika – finde Walter in lebhaften Metropolen und faszinierenden Landschaften!
+                </p>
             </section>
             <div>
-                <section>
-                    <h2>Themen</h2>
-                    <p>Entdecke Walter in Städten mit Geschichte, Kultur, Natur oder Innovation.</p>
+                <section class="eurasien">
+                    <h2>Eurasien</h2>
+                    <p>Tauche ein in Eurasien – finde Walter in Städten mit reicher Tradition und moderner Innovation.
+                    </p>
                 </section>
 
-                <section>
-                    <h2>Zeitreise</h2>
-                    <p>Reise durch die Zeit und finde Walter in historischen Städten.</p>
+                <section class="afrika">
+                    <h2>Afrika</h2>
+                    <p>Reise durch Afrika – entdecke Walter in Städten voller Kultur, Geschichte und Naturwunder.</p>
                 </section>
             </div>
 
-            <section>
-                <h2>Rätsel</h2>
-                <p>Knoble und entdecke: Löse Rätsel, um Walters Versteck aufzuspüren!</p>
+            <section class="asien">
+                <h2>Ozeanien/Asien</h2>
+                <p>Entdecke Asien und Ozeanien – finde Walter zwischen pulsierenden Städten und paradiesischen Orten!
+                </p>
             </section>
         </div>
     </main>
@@ -54,8 +64,11 @@
 
     <footer>
         <p class="attribution">
-            Kartografisches Minispiel: <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Wo ist Walter ?</a>.
+            Kartografisches Minispiel: <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Wo ist
+                Walter ?</a>.
             Coded by <a href="https://github.com/Christ-Kevin/four-card-section.git">Christ Touga Watat</a>.
         </p>
     </footer>
-</body></html>
+</body>
+
+</html>

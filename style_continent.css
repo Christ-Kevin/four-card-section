@@ -1,0 +1,64 @@
+.afrika,
+.eurasien,
+.asien,
+.amerika {
+    margin-top: -12%;
+}
+
+.afrika:hover,
+.eurasien:hover,
+.asien:hover,
+.amerika:hover {
+    cursor: pointer;
+}
+
+section.afrika {
+    border-top-color: var(--primary-orange);
+    background-image: url(images/icon-karma.svg);
+}
+
+section.eurasien {
+    border-top-color: var(--primary-red);
+    background-image: url(images/icon-team-builder.svg);
+}
+
+section.amerika {
+    border-top-color: var(--primary-cyan);
+    background-image: url(images/icon-supervisor.svg);
+}
+
+section.asien {
+    border-top-color: var(--primary-blue);
+    background-image: url(images/icon-calculator.svg);
+}
+
+#interactive-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+#interactive-elements button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#interactive-elements button:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #333;
+}

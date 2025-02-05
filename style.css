@@ -35,16 +35,35 @@ body {
     font-family: var(--ff-poppins);
     color: var(--fs-color);
     background-color: var(--neutral-very-light-gray);
+    transition: background-image 0.5s ease;
+    /* Übergangseffekt */
+
+    /* Weltkarte als Hintergrundbild */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg');
+    /* URL der Weltkarte */
+    background-size: cover;
+    /* Skaliert die Karte auf den gesamten Bildschirm */
+    background-position: center;
+    /* Zentriert das Bild */
+    background-repeat: no-repeat;
+    /* Verhindert Wiederholung des Bildes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Volle Höhe für zentrierte Darstellung */
 }
 
 main,
-main > div,
+main>div,
 body,
-main > div div,
+main>div div,
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 header h1 {
@@ -67,8 +86,8 @@ footer {
     padding-bottom: 5rem;
 }
 
-main > div,
-main > div div {
+main>div,
+main>div div {
     gap: 1.5rem;
     margin: 0 auto;
 }
@@ -84,6 +103,7 @@ section {
     background-position: 90% 85%;
     background-size: 3.563rem 3.563rem;
 }
+
 
 section:nth-of-type(1) {
     border-top-color: var(--primary-cyan);
@@ -104,6 +124,8 @@ div div section:nth-of-type(2) {
     border-top-color: var(--primary-orange);
     background-image: url(images/icon-karma.svg);
 }
+
+
 
 header {
     font-size: 0.9375rem;
@@ -142,6 +164,77 @@ p:not(header p:nth-of-type(1)) {
     color: var(--neutral-grayish-blue);
 }
 
+#timer {
+    position: fixed;
+    /* Der Timer bleibt sichtbar, auch beim Scrollen */
+    bottom: 20px;
+    /* Abstand vom unteren Rand */
+    right: 20px;
+    /* Abstand vom rechten Rand */
+    background: rgba(255, 255, 255, 0.8);
+    /* Transparenter Hintergrund */
+    color: #333;
+    padding: 10px 15px;
+    /* Innenabstand für bessere Lesbarkeit */
+    border-radius: 10px;
+    /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Leichter Schatten für Tiefe */
+    font-size: 1.5rem;
+    /* Große Schriftgröße */
+    font-weight: bold;
+    /* Fettgedruckter Text */
+    font-family: 'Poppins', sans-serif;
+    /* Einheitliche Schriftart */
+    z-index: 1000;
+    /* Über anderen Elementen anzeigen */
+    text-align: center;
+    /* Text zentrieren */
+    transition: opacity 0.3s ease;
+    /* Glatter Übergang für eventuelle Animationen */
+}
+
+/* Stile für die Karte und die Kartogramme */
+#map_container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+#map {
+
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#kartogramme {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+    overflow: visible;
+    /* Keine Interaktion mit der SVG */
+}
+
+.country-circle {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.country-circle:hover {
+    transform: scale(1.2);
+}
+
+#tooltip {
+    z-index: 10;
+    pointer-events: none;
+}
+
 @media (min-width: 47.75em) {
 
     header p:nth-of-type(2) {
@@ -155,7 +248,7 @@ p:not(header p:nth-of-type(1)) {
         background-size: 4rem 4rem;
     }
 
-    main > div {
+    main>div {
         flex-direction: row;
     }
 
@@ -163,8 +256,8 @@ p:not(header p:nth-of-type(1)) {
         height: 32.75rem;
     }
 
-    main > div > section,
-    main > div div {
+    main>div>section,
+    main>div div {
         width: 30%;
     }
 
@@ -177,4 +270,18 @@ p:not(header p:nth-of-type(1)) {
     header p:first-of-type {
         font-size: 2.25rem;
     }
+}
+
+.entdecker,
+.themen,
+.zeitreise,
+.raetsel {
+    transition: background-color 0.3s ease;
+}
+
+.afrika:hover,
+.amerika:hover,
+.eurasien:hover,
+.asien:hover {
+    background-color: #f0f0f0;
 }
